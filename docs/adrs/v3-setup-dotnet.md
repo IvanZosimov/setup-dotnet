@@ -28,7 +28,10 @@ The execution `dotnet-install.ps1 -Channel 5.0` installs the latest patch versio
 
 Inputs with wildcards in the patch tag (`5.0.x` or `5.0.*`) can be handled by passing major and minor versions to the installer script directly as a `channel` parameter. This parameter supports two-part version in `X.Y` format as input value ([see installer scripts documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script)).
 
-Inputs with wildcards in the minor tag (`3.x` or `3.*`) can be handled like that: 1) The request is sent to MS dist and the `releases.json` file is got 2) The action gets the latest possible channel version out of retrieved `releases.json` that satisfies input major tag (e.g. for `3.x` nowadays it's `3.1`) 3) Retrieved channel version is passed to installer script directly as `channel` parameter.
+Inputs with wildcards in the minor tag (`3.x` or `3.*`) can be handled like that:
+1. The request is sent to MS dist and the `releases.json` file is got
+2. The action gets the latest possible channel version out of retrieved `releases.json` that satisfies input major tag (e.g. for `3.x` nowadays it's `3.1`) 
+3. Retrieved channel version is passed to installer script directly as `channel` parameter.
 
 > **Note:** Using the `channel` parameter of the MS .NET installer scripts will allow us to use the `quality` parameter as well. This functionality is also asked for by our customers.
 
