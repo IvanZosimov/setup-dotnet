@@ -23,6 +23,7 @@ The behavior is different for macOS runners because the pre-installation directo
 
 - Change .NET installation path for Windows and Ubuntu images to match the location of pre-installed versions by using `-InstallDir` (Windows) and `--install-dir` (Ubuntu) properties for installer scripts:
 https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script
+
 - Simplify and in some cases fully get rid of logic for resolving wildcard versions and start relying on [official installer scripts provided by .NET Core team](https://github.com/dotnet/install-scripts).  
 The execution `dotnet-install.ps1 -Channel 5.0` installs the latest patch version for 5.0 SDK. If SDK is in the prerelease phase, the latest prerelease version (preview or rc) will be installed.
 
@@ -38,6 +39,7 @@ Inputs with wildcards in the minor tag (`3.x` or `3.*`) can be handled like that
 # Breaking changes
 - The presence of pre-installed .NET versions that are higher than the version that the users specify in the setup task can be breaking for some customers, who expect only one installed .NET version on the runner after using the setup task. If a user doesn't have .NET version specified in project file, the `dotnet` will use the latest installed version instead of provided in the setup task.  
 > **Note:** It is the biggest deal in this ADR.
+
 Previously, when a user would specify a .NET version, this exact version was used by the `dotnet` command by default (because it was installed in a separate folder and there were no other.NET versions in that folder)  
 In the proposal, the specified version will be installed on the machine but the latest version will be used by the `dotnet` command by default (because specified version will be installed alongside with pre-installed .NET versions).  
 Based on [official .NET documentation](https://docs.microsoft.com/en-us/dotnet/core/versions/selection), it is expected behavior and how it works on user's local machine with multiple installed .NET versions but some customer's workflows could be broken because they already rely on current behavior.
@@ -53,4 +55,3 @@ There will be a v3-preview branch that will be created for development and testi
 
 # Consequences
 - Customers will be able to use pre-installed .NET versions with setup-dotnet action on Windows and Ubuntu
-- Maintenance of the action will be easier due to the simplier logic of handling inputs with wildcards
