@@ -107,7 +107,7 @@ export class DotnetVersionResolver {
   }
 
   static DotNetCoreIndexUrl: string =
-    'https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json';
+    'https://github.com/actions/setup-dotnet/issues';
 }
 
 export class DotnetCoreInstaller {

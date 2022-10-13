@@ -273,7 +273,7 @@ class DotnetVersionResolver {
     }
 }
 exports.DotnetVersionResolver = DotnetVersionResolver;
-DotnetVersionResolver.DotNetCoreIndexUrl = 'https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json';
+DotnetVersionResolver.DotNetCoreIndexUrl = 'https://github.com/actions/setup-dotnet/issues';
 class DotnetCoreInstaller {
     constructor(version, quality) {
         this.version = version;
