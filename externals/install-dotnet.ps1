@@ -933,7 +933,7 @@ function Get-AkaMSDownloadLink([string]$Channel, [string]$Quality, [bool]$Intern
     Say-Verbose "Retrieving primary payload URL from aka.ms link for channel: '$Channel', quality: '$Quality' product: '$Product', os: 'win', architecture: '$Architecture'." 
    
     #construct aka.ms link
-    $akaMsLink = "https://aka.ms/dotnet"
+    $akaMsLink = "https://github.com"
     if ($Internal) {
         $akaMsLink += "/internal"
     }
@@ -1044,8 +1044,8 @@ function Get-Feeds-To-Use()
 
     if ($NoCdn) {
         $feeds = @(
-        "https://dotnetcli.blob.core.windows.net/dotnet",
-        "https://dotnetbuilds.blob.core.windows.net/public"
+        "https://github.com",
+        "https://github.com"
         )
 
         if (-not [string]::IsNullOrEmpty($UncachedFeed)) {
