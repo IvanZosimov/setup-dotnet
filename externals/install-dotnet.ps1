@@ -1034,8 +1034,8 @@ function Get-AkaMsLink-And-Version([string] $NormalizedChannel, [string] $Normal
 function Get-Feeds-To-Use()
 {
     $feeds = @(
-    "https://dotnetcli.azureedge.net/dotnet",
-    "https://dotnetbuilds.azureedge.net/public"
+    "https://github.com",
+    "https://github.com"
     )
 
     if (-not [string]::IsNullOrEmpty($AzureFeed)) {
