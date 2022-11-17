@@ -1,6 +1,7 @@
 name: Call codeql-analysis.yml
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
@@ -8,8 +9,7 @@ on:
     branches: [ main ]
   schedule:
     - cron: '23 19 * * 0'
-  workflow_dispatch:
 
 jobs:
-  check-dist:
+  codeql-analysis:
     uses: IvanZosimov/reusable-workflows/.github/workflows/codeql-analysis.yml@main
