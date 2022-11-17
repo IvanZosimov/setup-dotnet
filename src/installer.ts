@@ -178,7 +178,7 @@ export class DotnetCoreInstaller {
 
   public async installDotnet(): Promise<string> {
     const windowsDefaultOptions = [
-      '-NoLogo',
+      '-NoLogo1',
       '-Sta',
       '-NoProfile',
       '-NonInteractive',
