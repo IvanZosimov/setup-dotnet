@@ -14,10 +14,7 @@ on:
 jobs:
   build:
     uses: IvanZosimov/reusable-workflows/.github/workflows/licensed.yml@main
-    - name: Verify no unstaged changes
-      if: runner.os != 'windows'
-      run: __tests__/verify-no-unstaged-changes.sh
-
+    
   test-setup-multiple-versions:
     runs-on: ${{ matrix.operating-system }}
     strategy:
