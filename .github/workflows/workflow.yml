@@ -12,8 +12,8 @@ on:
       - '**.md'
 
 jobs:
-  build:
-    uses: IvanZosimov/reusable-workflows/.github/workflows/licensed.yml@main
+  ci:
+    uses: IvanZosimov/reusable-workflows/.github/workflows/workflow.yml@main
     
   test-setup-multiple-versions:
     runs-on: ${{ matrix.operating-system }}
