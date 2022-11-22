@@ -1,6 +1,6 @@
 ---
 name: atob-lite
-version: 2.0.0
+version: 2.0.1
 type: npm
 summary: Smallest/simplest possible means of using atob with both Node and browserify
 homepage: https://github.com/hughsk/atob-lite
