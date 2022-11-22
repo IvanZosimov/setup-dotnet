@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - populate-reusable-workflows
   pull_request:
     branches:
       - main
