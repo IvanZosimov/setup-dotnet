@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - populate-reusable-workflows
     paths-ignore:
       - '**.md'
   pull_request:
