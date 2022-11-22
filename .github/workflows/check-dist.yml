@@ -16,4 +16,3 @@ jobs:
     uses: IvanZosimov/reusable-workflows/.github/workflows/check-dist.yml@main
     with:
       dist-path: "./dist"
-      node-caching: "npm"
