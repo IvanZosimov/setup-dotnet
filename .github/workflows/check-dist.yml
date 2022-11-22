@@ -16,7 +16,9 @@ jobs:
   check-dist:
     uses: IvanZosimov/reusable-workflows/.github/workflows/check-dist.yml@main
     with:
-      build-command: "npm run build"
+      build-command: |
+        npm run build
+        npm run test
       #dist-path: "./dist"
-      node-version: "16.x"
-      node-caching: "npm"
+      node-version: "12.x"
+      #node-caching: "npm"
