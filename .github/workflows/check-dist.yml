@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - populate-reusable-workflows
     paths-ignore:
       - '**.md'
   pull_request:
@@ -15,5 +16,7 @@ jobs:
   check-dist:
     uses: IvanZosimov/reusable-workflows/.github/workflows/check-dist.yml@main
     with:
-      dist-path: "./dist"
+      build-command: "npm run build"
+      #dist-path: "./dist"
+      node-version: "16.x"
       node-caching: "npm"
