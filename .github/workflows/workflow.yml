@@ -16,5 +16,3 @@ on:
 jobs:
   ci:
     uses: IvanZosimov/reusable-workflows/.github/workflows/basic-validation.yml@main
-    with:
-      node-caching: ""
