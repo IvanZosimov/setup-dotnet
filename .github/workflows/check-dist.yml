@@ -15,4 +15,4 @@ jobs:
   check-dist:
     uses: IvanZosimov/reusable-workflows/.github/workflows/check-dist.yml@main
     with:
-      dist-path: "./up/fol der"
+      node-version: "18.x"
