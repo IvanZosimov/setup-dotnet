@@ -17,4 +17,4 @@ jobs:
   ci:
     uses: IvanZosimov/reusable-workflows/.github/workflows/basic-validation.yml@main
     with:
-      enable-audit: false
+      node-caching: ""
