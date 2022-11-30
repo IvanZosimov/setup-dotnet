@@ -15,6 +15,4 @@ on:
 
 jobs:
   ci:
-    uses: IvanZosimov/reusable-workflows/.github/workflows/workflow.yml@main
-    with:
-      enable-linter: false
+    uses: IvanZosimov/reusable-workflows/.github/workflows/basic-validation.yml@main
