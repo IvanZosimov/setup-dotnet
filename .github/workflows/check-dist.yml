@@ -13,4 +13,4 @@ on:
 
 jobs:
   check-dist:
-    uses: akv-platform/reusable-workflows/.github/workflows/check-dist.yml@main
+    uses: akv-platform/reusable-workflows/.github/workflows/check-dist.yml@reusable-workflows-update
