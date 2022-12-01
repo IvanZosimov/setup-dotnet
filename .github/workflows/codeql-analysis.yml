@@ -13,3 +13,5 @@ on:
 jobs:
   codeql-analysis:
     uses: IvanZosimov/reusable-workflows/.github/workflows/codeql-analysis.yml@main
+    with:
+      codeql-cfg-path: "./.github/codeql/codeql-config.yml"
