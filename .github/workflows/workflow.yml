@@ -8,13 +8,17 @@ on:
     branches:
       - main
       - releases/*
-      - populate-reusable-workflows
     paths-ignore:
       - '**.md'
   workflow_dispatch:
+    inputs:
+      enable-audit:
+        required: true
+        type: boolean
+        default: false
 
 jobs:
   ci:
     uses: IvanZosimov/reusable-workflows/.github/workflows/basic-validation.yml@main
     with:
-      enable-audit: false
+      enable-audit: ${{inputs.enable-audit}}
