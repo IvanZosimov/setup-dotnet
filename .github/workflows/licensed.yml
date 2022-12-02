@@ -12,5 +12,3 @@ on:
 jobs:
   licenced:
     uses: IvanZosimov/reusable-workflows/.github/workflows/licensed.yml@main
-    with:
-      licensed-url: "https://github.com/github/licensed/releases/download/3.9.0/licensed-3.9.0-linux-x64.tar.gz"
