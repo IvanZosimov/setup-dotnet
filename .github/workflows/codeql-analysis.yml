@@ -13,4 +13,6 @@ on:
 jobs:
   codeql-analysis:
     uses: IvanZosimov/reusable-workflows/.github/workflows/codeql-analysis.yml@main
+    with:
+      build-command: "echo 'Hello world'"
 
